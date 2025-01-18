@@ -1,0 +1,93 @@
+/* CSS chính cho phần Bài tập Lab */
+.lab-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 200px;
+    /* Chiều cao tối thiểu 100% màn hình */
+    background-color: #f9f9f9;
+    /* Màu nền nhạt */
+    padding-top: 70px;
+    /* Thêm khoảng cách phía trên */
+}
+
+/* Thu nhỏ và căn giữa khung chứa Lab */
+.lab-container {
+    width: 100%;
+    max-width: 600px;
+    /* Giới hạn chiều rộng */
+    padding: 20px;
+    /* Thêm khoảng cách bên trong */
+    background-color: #ffffff;
+    /* Nền trắng */
+    border-radius: 10px;
+    /* Bo góc mềm mại */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Thêm bóng mờ nhẹ */
+    margin-bottom: 100px;
+    /* Khoảng cách giữa lab-container và lab-content */
+}
+
+/* Căn chỉnh và làm nổi bật tiêu đề */
+.lab-container h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    /* Kích thước chữ vừa phải */
+    color: #333;
+    /* Màu chữ tối */
+    margin-bottom: 20px;
+}
+
+/* Thanh điều hướng trong khung Lab */
+.lab-container .navbar {
+    width: 100%;
+    border-radius: 5px;
+    /* Bo góc nhẹ cho thanh điều hướng */
+}
+
+.lab-container .nav-link {
+    color: #555;
+    /* Màu chữ mặc định */
+    transition: color 0.3s ease;
+    /* Hiệu ứng khi hover */
+}
+
+.lab-container .nav-link:hover {
+    color: #e22a58;
+    /* Màu chữ khi hover */
+}
+
+/* Định dạng cho div chứa nội dung Lab */
+.lab-content {
+    width: 100%;
+    max-width: 80%;
+    /* Chiều rộng tối đa */
+    margin: 0 auto;
+    margin-bottom: 100px;
+    /* Căn giữa khối lab-content */
+    padding: 20px;
+    background-color: #ffffff;
+    /* Màu nền trắng */
+    border-radius: 10px;
+    /* Bo góc mềm mại */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Bóng mờ nhẹ */
+    text-align: center;
+    /* Căn nội dung trong khối về giữa */
+}
+
+/* Căn chỉnh tiêu đề trong box */
+.lab-content h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+/* Nội dung trong box */
+.lab-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}

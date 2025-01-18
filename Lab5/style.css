@@ -1,0 +1,366 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Tahoma;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    background-color: black;
+    height: 180px;
+    width:100%
+    
+}
+
+.header h1{
+    color: white;
+    margin-left: 10px;
+}
+
+.hours{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+}
+.hours .fa-circle-exclamation{
+    color: #ccc;
+    margin-top: 15px;
+}
+
+.hours p{
+    color: white;
+}
+.hours h3{
+    color: white;
+}
+
+.nav_bar {
+    position: relative;
+    display: flex;
+}
+
+.nav_bar a {
+    position: relative;
+    color: #ccc;
+    margin: 10px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0; /* Đặt thanh gạch chân ở dưới cùng của nav_bar */
+    height: 5px; /* Độ dày của thanh */
+    background-color: rgb(255, 255, 255); /* Màu của thanh */
+    transition: left 0.3s ease, width 0.3s ease; /* Hiệu ứng chuyển động */
+    width: 0; /* Bắt đầu với chiều rộng bằng 0 */
+}
+
+
+
+
+.section_1{
+    border-top: 1px solid black;
+    margin-top: 40px;
+    margin-left: 10px;
+
+}
+.center_text{
+    display: flex;
+}
+.text{
+    flex: 80%;
+
+}
+.import_btn{
+    flex: 20%;
+}
+
+.import_btn button{
+    height: 35px;
+    width: 150px;
+    background-color: rgb(162, 83, 236);
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.import_btn button:hover{
+    cursor: pointer;
+}
+.import_btn button:active{
+    background-color: chartreuse;
+    color: white;
+}
+
+.text_1{
+    display: flex;
+    gap: 10px;
+    
+}
+.text_1 .fa-circle-exclamation{
+    color: #787878;
+    margin-top: 18px;
+}
+
+.section_2{
+    border-top: 1px solid black;
+    margin-left: 10px;
+}
+.text_btn_2{
+    display: flex;
+}
+.text_cer{
+    display: flex;
+    gap: 10px;
+}
+.text_cer .fa-circle-exclamation{
+    color: #787878;
+    margin-top: 17px;
+}
+.explore_btn button{
+    height: 35px;
+    background-color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 400px;
+}
+.explore_btn button:hover{
+    cursor: pointer;
+}
+.explore_btn button:active{
+    background-color: chartreuse;
+    color: white;
+}
+
+.section_3{
+    display: flex;
+}
+.section_3 .cer_left{
+    flex: 50%;
+    width: 450px;
+    height: 130px;
+    border: 1px solid #7d7d7d;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.img_text{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.img_text p{
+    margin-left: 10px;
+}
+.section_3 .cer_right{
+    flex: 50%;
+    width: 450px;
+    height: 130px;
+    border: 1px solid #7d7d7d;
+    position: relative;
+    left: 500px;
+    bottom: 130px;
+}
+.img_text_2{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.img_text_2 p{
+    margin-left: 10px;
+}
+.section_3 .fa-ellipsis-vertical{
+    position: relative;
+    bottom: 10px;
+    left: 400px;
+}
+
+.section_ar{
+    margin-top: 10px;
+    display: flex;
+    gap: 50px;
+}
+
+.section_ar_1{
+    width: 300px;
+    height: 500px;
+}
+.section_ar_1 p{
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    bottom: 50px;
+}
+.section_ar_1 h4{
+    color: #787878;
+    position: relative;
+    bottom: 55px;
+}
+.percent {
+    width: 300px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0; /* Màu nền của thanh tiến trình */
+    border-radius: 5px;
+    position: relative;
+    bottom: 50px;
+}
+
+.progress {
+    height: 5px;
+    background-color: blueviolet; /* Màu của thanh tiến trình khi hoàn thành */
+    border-radius: 5px;
+}
+.star-rating {
+    font-size: 30px; /* Kích thước ngôi sao */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua ngôi sao */
+}
+
+.star {
+    color: gray; /* Màu mặc định của ngôi sao */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+    font-size: 25px;
+    position: relative;
+    left: 50px;
+    bottom: 43px;
+}
+
+.star.filled {
+    color: gold; /* Màu khi ngôi sao được tô */
+}
+.rate{
+    display: flex;
+}
+
+
+
+
+.section_ar_2{
+    width: 300px;
+    height: 500px;
+}
+.progress-bar_2 {
+    width: 100%;
+    background-color: #e0e0e0; /* Màu nền của thanh tiến trình */
+    border-radius: 5px;
+    position: relative;
+    bottom: 50px;
+}
+
+.progress_2 {
+    height: 5px;
+    background-color: blueviolet; /* Màu của thanh tiến trình khi hoàn thành */
+    border-radius: 5px;
+}
+.star-rating_2 {
+    font-size: 30px; /* Kích thước ngôi sao */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua ngôi sao */
+}
+
+.star_2 {
+    color: gray; /* Màu mặc định của ngôi sao */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+    font-size: 25px;
+    position: relative;
+    left: 170px;
+    bottom: 100px;
+}
+
+.star_2.filled {
+    color: gold; /* Màu khi ngôi sao được tô */
+}
+
+.section_ar_3{
+    width: 300px;
+    height: 500px;
+}
+
+.progress-bar_3 {
+    width: 100%;
+    background-color: #e0e0e0; /* Màu nền của thanh tiến trình */
+    border-radius: 5px;
+    position: relative;
+    bottom: 50px;
+}
+
+.progress_3 {
+    height: 5px;
+    background-color: blueviolet; /* Màu của thanh tiến trình khi hoàn thành */
+    border-radius: 5px;
+}
+
+.star-rating_3 {
+    font-size: 30px; /* Kích thước ngôi sao */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua ngôi sao */
+}
+
+.star_3 {
+    color: gray; /* Màu mặc định của ngôi sao */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+    font-size: 25px;
+    position: relative;
+    left: 170px;
+    bottom: 100px;
+}
+
+.star_3.filled {
+    color: gold; /* Màu khi ngôi sao được tô */
+}
+
+.passage p{
+    white-space: none;
+    color: #787878;
+}
+
+.section_end{
+    display: flex;
+    margin-top: 20px;
+    height: 300px;
+    gap: 20px;
+}
+
+.learn_left{
+    flex: 50%;
+    width: 500px;
+    height: 190px;
+    display: flex;
+    border: 1px solid black;
+    gap: 10px;
+}
+
+.img{
+    flex: 20%;
+}
+.pass{
+    flex:80%;
+    gap: 10px;
+}
+.img img{
+    margin-top: 15px;
+}
+
+.learn_right img{
+    margin-bottom: 10px;
+}
+
+.learn_right{
+        flex: 50%;
+        width: 500px;
+        height: 190px;
+        display: flex;
+        border: 1px solid black;
+        gap: 10px;
+}
+

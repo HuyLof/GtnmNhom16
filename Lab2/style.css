@@ -1,0 +1,542 @@
+body {
+    margin: 0;
+    color: #6a6f8c;
+    background: #c8c8c8;
+    font: 600 16px/18px 'Open Sans', sans-serif;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: '';
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+    display: block
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+
+
+.login-wrap {
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    max-width: 525px;
+    min-height: 670px;
+    position: relative;
+    background: url(https://hinhnendienthoai.info/wp-content/uploads/2024/06/anh-tiktoker-phuong-thuy-xinh-dep-de-thuong-7.jpg) no-repeat center;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+.login-html {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+    background: rgba(40, 57, 101, .9);
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check {
+    display: none;
+}
+
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+    text-transform: uppercase;
+}
+
+.login-html .tab {
+    font-size: 22px;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.login-html .sign-in:checked+.tab,
+.login-html .sign-up:checked+.tab {
+    color: #fff;
+    border-color: #1161ee;
+}
+
+.login-form {
+    min-height: 345px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.login-form .group {
+    margin-bottom: 15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+    width: 100%;
+    color: #fff;
+    display: block;
+}
+
+.login-form .group .input,
+.login-form .group .button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+}
+
+.login-form .group input[data-type="password"] {
+    text-security: circle;
+    -webkit-text-security: circle;
+}
+
+.login-form .group .label {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.login-form .group .button {
+    background: #1161ee;
+}
+
+.login-form .group label .icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    background: rgba(255, 255, 255, .1);
+}
+
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    transition: all .2s ease-in-out 0s;
+}
+
+.login-form .group label .icon:before {
+    left: 3px;
+    width: 5px;
+    bottom: 6px;
+    transform: scale(0) rotate(0);
+}
+
+.login-form .group label .icon:after {
+    top: 6px;
+    right: 0;
+    transform: scale(0) rotate(0);
+}
+
+.login-form .group .check:checked+label {
+    color: #fff;
+}
+
+.login-form .group .check:checked+label .icon {
+    background: #1161ee;
+}
+
+.login-form .group .check:checked+label .icon:before {
+    transform: scale(1) rotate(45deg);
+}
+
+.login-form .group .check:checked+label .icon:after {
+    transform: scale(1) rotate(-45deg);
+}
+
+.login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm {
+    transform: rotate(0);
+}
+
+.login-html .sign-up:checked+.tab+.login-form .sign-up-htm {
+    transform: rotate(0);
+}
+
+.hr {
+    height: 2px;
+    margin: 60px 0 50px 0;
+    background: rgba(255, 255, 255, .2);
+}
+
+.foot-lnk {
+    text-align: center;
+}
+
+
+/* Reset mặc định cho các thành phần */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.coding-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.coding-container:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.coding-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.coding-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+/* Language switcher */
+.coding-language-switcher {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.coding-language-switcher label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.coding-language-switcher select {
+    padding: 10px;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #2980b9;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.coding-language-switcher select:hover {
+    border-color: #1c6f9e;
+}
+
+/* Code editor */
+.coding-editor {
+    width: 100%;
+    height: 350px;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    color: #333;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.coding-editor:focus {
+    border-color: #3498db;
+}
+
+/* Instructions */
+.coding-instructions {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 4px solid #3498db;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.coding-instructions h3 {
+    font-size: 18px;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.coding-instructions p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* Test cases table */
+.coding-test-cases {
+    margin-bottom: 20px;
+}
+
+.coding-test-cases h3 {
+    font-size: 18px;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.coding-test-cases table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.coding-test-cases table th,
+.coding-test-cases table td {
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    text-align: center;
+}
+
+.coding-test-cases table th {
+    background-color: #3498db;
+    color: white;
+}
+
+.coding-test-cases table td {
+    background-color: #ecf0f1;
+    font-size: 14px;
+}
+
+.coding-test-cases .status-passed {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.coding-test-cases .status-failed {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Buttons */
+.coding-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.coding-buttons button {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.coding-buttons button:hover {
+    background-color: #2980b9;
+}
+
+.coding-buttons button:active {
+    background-color: #1c6f9e;
+}
+
+/* Output */
+.coding-output {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.coding-output pre {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .coding-container {
+        padding: 20px;
+    }
+
+    .coding-editor {
+        height: 300px;
+    }
+
+    .coding-buttons button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .coding-output {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+/* nopbai.html*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ebee;
+    /* Màu nền xám nhạt như Facebook */
+    color: #1c1e21;
+    /* Màu chữ xám đậm */
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: white;
+    /* Nền trắng cho container */
+    padding: 20px;
+    border-radius: 8px;
+    /* Bo góc */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Bóng đổ nhẹ */
+}
+
+h1,
+h2,
+h3 {
+    color: #1877f2;
+    /* Màu xanh lam của Facebook */
+}
+
+.result {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    /* Bo góc nhẹ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #1877f2;
+    /* Màu xanh cho tiêu đề bảng */
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #1877f2;
+    /* Màu xanh Facebook */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #145dbf;
+    /* Màu xanh đậm khi hover */
+}
+
+button#retry {
+    background-color: #42b72a;
+    /* Màu xanh lá cho nút "Thử lại" */
+}
+
+button#retry:hover {
+    background-color: #36a420;
+    /* Màu xanh lá đậm khi hover */
+}
+
+button#back {
+    background-color: #f02849;
+    /* Màu đỏ cho nút "Quay lại" */
+}
+
+button#back:hover {
+    background-color: #c81d2e;
+    /* Màu đỏ đậm khi hover */
+}
+
+#performance p {
+    font-size: 14px;
+    color: #606770;
+    /* Màu chữ nhạt hơn cho thông tin phụ */
+}
+
+#result {
+    display: none;
+    /* Kết quả nộp bài sẽ được hiển thị khi cần */
+}

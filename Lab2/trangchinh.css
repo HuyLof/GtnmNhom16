@@ -1,0 +1,137 @@
+/* Reset mặc định cho các thành phần */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #8f2a2a;
+    padding: 20px;
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    color: #2b53a8;
+    margin-bottom: 20px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #0a44a8;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background-color: rgba(40, 61, 112, 0.9);
+    transform: scale(1.05);
+}
+
+.tab.active {
+    background-color: #bfcfee;
+    color: #8d0f43;
+    border: 1px solid #fff;
+}
+
+/* Tab Content */
+.tab-content {
+    border: 1px solid #aaa;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #1161ee;
+    border-radius: 5px;
+}
+
+/* Exercise Section */
+.exercise {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 10px;
+}
+
+.exercise-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #af0d4b;
+}
+
+.exercise-description,
+.exercise-info {
+    margin: 5px 0;
+    color: #031e4e;
+}
+
+/* Search Section */
+.search-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 300px;
+    padding: 10px 20px;
+    border: 2px solid #2e4a7b;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #2e4a7b;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus {
+    border-color: #1e3560;
+    box-shadow: 0 0 10px rgba(46, 74, 123, 0.5);
+}
+
+.search-button {
+    background-color: #0a44a8;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-left: 5px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button:hover {
+    background-color: #1e3560;
+    transform: scale(1.05);
+}
+
+.search-button i {
+    font-size: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search-box {
+        width: 200px;
+    }
+
+    .search-button {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}

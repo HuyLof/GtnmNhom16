@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My learning</h1>
+            <div class="hours">
+                <p style="font-weight: bold;">87hr 36min</p>
+                <p>watched</p>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p style="font-weight: bold;">View all activity</p>
+            </div>
+
+            <div class="nav_bar">
+                <a href="">All courses</a>
+                <a href="">Learning paths</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="archived.html">Archived</a>
+                <a href="learning_tools.html">Learning tools</a>
+            </div>
+        </div>
+
+        <div class="section_ar">
+            <div class="section_ar_1">
+                <img src="img/anh_nen_1.webp" alt="" width="300px" height="250px">
+                <i class="fa-solid fa-ellipsis-vertical"
+                    style="position: relative;bottom: 245px;left: 250px; padding: 15px; background-color: white;"></i>
+
+                <p>Js_Java Script Responsility Training 2024</p>
+                <h4>FS Content Development</h4>
+
+                <div class="percent">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+
+                    <div class="rate">
+                        <h4>100% Complete</h4>
+                        <div class="star-rating">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                            <h4 style="color: #787878; font-size: 15px; position: relative; left: 100px;">Your rating
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section_ar_2">
+                <img src="img/anh_nen_2.webp" alt="" width="300px" height="250px">
+                <i class="fa-solid fa-ellipsis-vertical"
+                    style="position: relative;bottom: 245px; left: 250px; padding: 15px; background-color: white; border: black 1px solid;"></i>
+
+                <p style="font-weight: bolder; font-size: 20px; position: relative; bottom: 50px;">Java_ Responsility
+                    Training 2024</p>
+                <h4 style="color: #787878; position: relative; bottom: 55px;">FS Content Development</h4>
+
+                <div class="percent_2">
+                    <div class="progress-bar_2">
+                        <div class="progress_2" style="width: 90%;"></div>
+                    </div>
+
+                    <div class="rate_2">
+                        <h4 style="color: #787878;position: relative; bottom: 53px;">90% Complete</h4>
+                        <div class="star-rating_2">
+                            <span class="star_2" data-value="1">★</span>
+                            <span class="star_2" data-value="2">★</span>
+                            <span class="star_2" data-value="3">★</span>
+                            <span class="star_2" data-value="4">★</span>
+                            <span class="star_2" data-value="5">★</span>
+                            <h4
+                                style="color: #787878; font-size: 15px; position: relative; left: 230px; bottom: 115px;">
+                                Your rating</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section_ar_3">
+                <img src="img/anh_nen_3.jpg" alt="" width="300px" height="250px">
+                <i class="fa-solid fa-ellipsis-vertical"
+                    style="position: relative;bottom: 245px; left: 250px; padding: 15px; background-color: white; "></i>
+
+                <p style="font-weight: bolder; font-size: 20px; position: relative; bottom: 50px;">Python_ Responsility
+                    Training 2024</p>
+                <h4 style="color: #787878; position: relative; bottom: 55px;">FS Content Development</h4>
+
+                <div class="percent_3">
+                    <div class="progress-bar_3">
+                        <div class="progress_3" style="width: 50%;"></div>
+                    </div>
+
+                    <div class="rate_3">
+                        <h4 style="color: #787878;position: relative; bottom: 53px;">50% Complete</h4>
+                        <div class="star-rating_3">
+                            <span class="star_3" data-value="1">★</span>
+                            <span class="star_3" data-value="2">★</span>
+                            <span class="star_3" data-value="3">★</span>
+                            <span class="star_3" data-value="4">★</span>
+                            <span class="star_3" data-value="5">★</span>
+                            <h4
+                                style="color: #787878; font-size: 15px; position: relative; left: 230px; bottom: 110px;">
+                                Your rating</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars1 = document.querySelectorAll('.star');
+            const stars2 = document.querySelectorAll('.star_2');
+            const stars3 = document.querySelectorAll('.star_3');
+
+            function setupStarRating(stars) {
+                stars.forEach(star => {
+                    star.addEventListener('click', function () {
+                        const rating = parseFloat(this.getAttribute('data-value'));
+                        updateStars(stars, rating);
+                    });
+                });
+            }
+
+            function updateStars(stars, rating) {
+                stars.forEach(star => {
+                    star.classList.remove('filled', 'half'); // Xóa lớp trước đó
+                    const starValue = parseFloat(star.getAttribute('data-value'));
+
+                    if (starValue < rating) {
+                        star.classList.add('filled'); // Ngôi sao đã được chọn
+                    } else if (starValue === Math.floor(rating) && rating % 1 !== 0) {
+                        star.classList.add('half'); // Ngôi sao nửa nếu giá trị là số thập phân
+                    }
+                });
+            }
+
+            // Thiết lập cho cả hai hệ thống đánh giá sao
+            setupStarRating(stars1);
+            setupStarRating(stars2);
+            setupStarRating(stars3);
+        });
+
+    </script>
+</body>
+
+</html>

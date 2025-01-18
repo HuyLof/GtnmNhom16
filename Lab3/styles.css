@@ -1,0 +1,236 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F4F1; /* Light, soft background */
+    color: #333; /* Dark gray text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+.fb-header {
+    color: #003366;
+    padding: 30px;
+    text-align: center;
+    font-size: 2rem; /* Larger font size for emphasis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Container for subject cards */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between cards */
+    padding: 40px;
+    max-width: 1200px; /* Max width for container */
+    margin: auto; /* Center the container */
+}
+
+/* Card styling */
+.subject-card {
+    background-color: white; /* White background for cards */
+    padding: 20px; /* Padding for spacious look */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack icon, text, and button vertically */
+    align-items: center; /* Center align the content */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.subject-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.subject-card i {
+    font-size: 60px; /* Icon size */
+    color: #336699; /* Green icon color */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+.subject-card span {
+    margin-bottom: 10px; /* Space between text and button */
+    font-weight: bold; /* Make the subject name bold */
+    font-size: 1.1rem; /* Slightly larger font size for clarity */
+    color: #444; /* Darker text color */
+}
+
+.fb-btn {
+    display: inline-block;
+    background-color: #388E3C; /* Darker green for button */
+    color: white;
+    padding: 10px 20px; /* Button padding */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Consistent font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.fb-btn:hover {
+    background-color: #192670; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+
+
+/* General body styles for the link page */
+.link-page-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F4F1; /* Light background */
+}
+
+/* Header and navigation styles for the link page */
+.link-page-header {
+    background-color: #192670; /* Dark blue header */
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.link-page-nav-bar {
+    display: flex;
+    justify-content: space-between; /* Aligns items to the edges */
+    align-items: center; /* Vertically centers items */
+}
+
+.link-page-nav-left {
+    display: flex; /* Align items in a row */
+}
+
+.link-page-nav-item {
+    color: white;
+    text-decoration: none; /* Remove underline */
+    margin-right: 20px; /* Space between items */
+    font-size: 1.2rem;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.link-page-nav-item:hover {
+    color: #336699; /* Lighter blue on hover */
+}
+
+.link-page-nav-right {
+    margin-left: auto; /* Push back button to the right */
+}
+
+.link-page-nav-button {
+    background-color: #336699; /* Medium blue for button */
+    color: white;
+    padding: 10px 15px; /* Button padding */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.link-page-nav-button:hover {
+    background-color: #003366; /* Darker blue on hover */
+}
+
+/* Content styles for the link page */
+.link-page-content {
+    display: flex; /* Use flexbox for layout */
+    padding: 40px;
+}
+
+.link-page-exercise-list {
+    width: 30%; /* 30% width for exercise list */
+    margin-right: 20px; /* Space between sections */
+    background-color: #ffffff; /* White background for exercise list */
+    padding: 20px; /* Padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.link-page-exercise-list h2 {
+    margin-bottom: 10px; /* Space below title */
+    color: #003366; /* Darker blue for section title */
+}
+
+.link-page-exercise-list ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.link-page-exercise-list li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.link-page-exercise-list a {
+    text-decoration: none; /* Remove underline */
+    color: #336699; /* Blue text color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.link-page-exercise-list a:hover {
+    color: #192670; /* Darker blue on hover */
+}
+
+.link-page-document-section {
+    width: 70%; /* 70% width for document section */
+    background-color: #ffffff; /* White background for documents */
+    padding: 20px; /* Padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.link-page-document-section h2 {
+    margin-bottom: 10px; /* Space below title */
+    color: #003366; /* Darker blue for section title */
+}
+
+.link-page-document-section p {
+    margin: 5px 0; /* Space between paragraphs */
+    color: #666666; /* Gray text color */
+}
+
+/* Details styles */
+.link-page-document-detail {
+    margin-top: 20px; /* Space above details */
+}
+
+.link-page-document-detail h3 {
+    margin: 10px 0; /* Space around detail title */
+}
+
+.link-page-document-detail p {
+    margin: 5px 0; /* Space between paragraphs */
+    color: #666666; /* Gray text color */
+}
+
+.link-page-document-detail iframe {
+    width: 100%; /* Full width for PDF */
+    height: 300px; /* Fixed height for PDF viewer */
+    border: none; /* No border */
+}
+
+
+
+/* Styles for the navigation buttons on the left */
+.link-page-nav-left {
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+.link-page-nav-left .link-page-nav-item {
+    position: relative; /* Position relative for hover effect */
+    padding: 10px 15px; /* Padding for the button */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+    border-right: 2px solid transparent; /* Add right border */
+}
+
+.link-page-nav-left .link-page-nav-item:hover {
+    background-color: #084d92; /* Change background color on hover */
+    color: #f0f0f0; /* Change text color on hover */
+}
+
+.link-page-nav-left .link-page-nav-item:last-child {
+    border-right: none; /* Remove border for the last item */
+}

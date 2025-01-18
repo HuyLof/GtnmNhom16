@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Liên Kết</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body class="link-page-body">
+    <header class="link-page-header">
+        <nav class="link-page-nav-bar">
+            <div class="link-page-nav-left">
+                <a href="#" class="link-page-nav-item" onclick="showSection('exercise')">Bài tập</a>
+                <a href="#" class="link-page-nav-item" onclick="showSection('lecture')">Bài giảng</a>
+                <a href="#" class="link-page-nav-item" onclick="showSection('document')">Tài liệu</a>
+            </div>
+            <div class="link-page-nav-right">
+                <a href="#" class="link-page-nav-button"><i class="fa-solid fa-chevron-left"></i> Back</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="link-page-content">
+        <div class="link-page-exercise-list">
+            <h2>Bài Tập</h2>
+            <ul>
+                <li><a href="#" onclick="selectExercise('Bài tập 1')">Bài tập 1</a></li>
+                <li><a href="#" onclick="selectExercise('Bài tập 2')">Bài tập 2</a></li>
+                <li><a href="#" onclick="selectExercise('Bài tập 3')">Bài tập 3</a></li>
+                <li><a href="#" onclick="selectExercise('Bài tập 4')">Bài tập 4</a></li>
+                <li><a href="#" onclick="selectExercise('Bài tập 5')">Bài tập 5</a></li>
+            </ul>
+        </div>
+        <div class="link-page-document-section">
+            <h2 id="current-section-title">Tài Liệu</h2>
+            <div id="document-content">
+                <p>Tên tài liệu trên</p>
+                <p>Tài liệu FDP</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

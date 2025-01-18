@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My learning</h1>
+            <div class="hours">
+                <p style="font-weight: bold;">87hr 36min</p>
+                <p>watched</p>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p style="font-weight: bold;">View all activity</p>
+            </div>
+            <div class="nav_bar">
+                <a href="#" class="tab" data-tab="all-courses">All courses</a>
+                <a href="#" class="tab" data-tab="learning-paths">Learning paths</a>
+                <a href="certifications.html" class="tab" data-tab="certifications">Certifications</a>
+                <a href="archived.html" class="tab" data-tab="archived">Archived</a>
+                <a href="learning_tools.html" class="tab" data-tab="learning-tools">Learning tools</a>
+                <div class="underline"></div> <!-- Thanh gạch chân -->
+            </div>
+        </div>
+
+        <div class="section_1">
+            <p style="font-weight: bold;">My badges</p>
+            <div class="center_text">
+                <div class="text">
+                    <div class="text_1">
+                        <p>You have earned and upload
+                        <p style="font-weight: bold;">0 badges</p>
+                        </p>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <div class="text_2">
+                        <p>Currently, there are no badges uploaded to your profile. Begin your journey towards your
+                            certifications goals or upload your third-party badges to your profile and impress your
+                            manager and peers with your accomplishments. Start preparing for your next certificate
+                            today!</p>
+                    </div>
+                </div>
+
+                <div class="import_btn">
+                    <button>Import new badge</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section_2">
+            <p style="font-weight: bold;">Certification preparation</p>
+            <div class="sec_center">
+                <div class="text_btn_2">
+                    <div class="text_cer">
+                        <p>You are preparing for
+                        <p style="font-weight: bold;">4 certifications</p>
+                        </p>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <div class="explore_btn">
+                        <button>Explore certifications preparation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section_3">
+            <div class="end_cer">
+                <div class="cer_left">
+                    <div class="img_text">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <img src="img/oracle.png" alt="" width="100px" height="100px">
+                        <p style="font-weight: bold;">Oracle Certified Associate, Java SE 8 Programmer </p>
+                        <p style="position: relative; right: 278px; top: 50px; color: #7d7d7d;">Oracle</p>
+                    </div>
+                </div>
+
+                <div class="cer_right">
+                    <div class="img_text_2">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <img src="img/intell.png" alt="" width="100px" height="100px">
+                        <p style="font-weight: bold;">ISTQB Certified Tester Foundation Level (CTFL)</p>
+                        <p style="position: relative; right: 258px; top: 50px; color: #7d7d7d;">Brightest</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Đặt script ở cuối body -->
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const underline = document.querySelector('.underline');
+
+        // Hàm để đặt vị trí và chiều rộng của thanh gạch chân
+        function setUnderline(tab) {
+            const tabRect = tab.getBoundingClientRect();
+            const navRect = document.querySelector('.nav_bar').getBoundingClientRect();
+            underline.style.left = `${tabRect.left - navRect.left}px`;
+            underline.style.width = `${tabRect.width}px`;
+        }
+
+        // Đặt thanh gạch chân cho tab đầu tiên khi tải trang
+        if (tabs.length > 0) {
+            setUnderline(tabs[0]); // Đặt cho tab đầu tiên
+        }
+
+        // Gán sự kiện click cho từng tab
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function (event) {
+                // Cập nhật vị trí và chiều rộng của thanh gạch chân
+                setUnderline(this);
+
+                // Kiểm tra xem tab có dẫn đến một trang khác không
+                if (this.getAttribute('href') !== "#") {
+                    event.preventDefault(); // Ngăn chặn chuyển hướng nếu tab có href="#"
+
+                    // Sử dụng setTimeout để cho phép thanh gạch chân cập nhật trước khi chuyển trang
+                    setTimeout(() => {
+                        window.location.href = this.getAttribute('href'); // Chuyển đến trang mới
+                    }, 300); // Thời gian trễ (300ms) để hiệu ứng chuyển động hoạt động
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

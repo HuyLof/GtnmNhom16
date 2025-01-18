@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Thi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="exam-page"> <!-- Thêm class để phân biệt phần này -->
+    <div class="container">
+        <h1>Bài Thi</h1>
+        <div class="result" id="result" style="display:none;">
+            <h2>Kết quả nộp bài</h2>
+            <div id="status"></div>
+            <div id="output"></div>
+            <h3>Các Trường Hợp Kiểm Tra</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Đầu vào</th>
+                        <th>Đầu ra dự kiến</th>
+                        <th>Đầu ra thực tế</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody id="test-cases-results">
+                    <!-- Các trường hợp kiểm tra sẽ được thêm vào đây -->
+                </tbody>
+            </table>
+            <div id="performance">
+                <p>Điểm: <span id="score"></span></p>
+                <p>Trạng thái: <span id="completion-status"></span></p>
+                <p>Thời gian thực hiện: <span id="execution-time"></span></p>
+                <p>Bộ nhớ sử dụng: <span id="memory-usage"></span></p>
+            </div>
+            <div class="buttons">
+                <button id="retry">Thử lại</button>
+                <button id="back">Quay lại bảng điều khiển</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Giả lập quá trình kiểm tra mã
+            const output = "Kết quả nộp bài"; // Kết quả giả lập
+            const status = "Thành công"; // Trạng thái giả lập
+
+            // Giả lập các trường hợp kiểm tra
+            const testCases = [
+                { input: "test1", expectedOutput: "output1", actualOutput: "output1", status: "Đã vượt qua" },
+                { input: "test2", expectedOutput: "output2", actualOutput: "output3", status: "Không vượt qua" },
+                { input: "test3", expectedOutput: "output3", actualOutput: "output3", status: "Đã vượt qua" },
+            ];
+
+            // Cập nhật trạng thái và đầu ra
+            document.getElementById('status').innerText = status;
+            document.getElementById('output').innerText = output;
+
+            // Hiển thị các trường hợp kiểm tra
+            const testCasesResultsTable = document.getElementById('test-cases-results');
+            testCasesResultsTable.innerHTML = '';
+            let score = 0;
+
+            testCases.forEach(testCase => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                <td>${testCase.input}</td>
+                <td>${testCase.expectedOutput}</td>
+                <td>${testCase.actualOutput}</td>
+                <td>${testCase.status}</td>
+            `;
+                testCasesResultsTable.appendChild(row);
+
+                if (testCase.status === "Đã vượt qua") {
+                    score++;
+                }
+            });
+
+            // Cập nhật điểm
+            document.getElementById('score').innerText = `${score} / ${testCases.length}`;
+
+            // Hiển thị trạng thái hoàn thành
+            const completionStatus = score === testCases.length ? "Hoàn thành" : "Không hoàn thành";
+            document.getElementById('completion-status').innerText = completionStatus;
+
+            // Thời gian và bộ nhớ giả lập
+            document.getElementById('execution-time').innerText = "100ms"; // Thời gian giả lập
+            document.getElementById('memory-usage').innerText = "512KB"; // Bộ nhớ giả lập
+
+            // Hiển thị kết quả nộp bài
+            document.getElementById('result').style.display = 'block';
+        });
+
+        // Xử lý nút Thử lại
+        document.getElementById('retry').addEventListener('click', function () {
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('test-cases-results').innerHTML = ''; // Reset bảng kết quả
+            document.getElementById('score').innerText = ''; // Reset điểm
+            document.getElementById('completion-status').innerText = ''; // Reset trạng thái
+            document.getElementById('execution-time').innerText = ''; // Reset thời gian
+            document.getElementById('memory-usage').innerText = ''; // Reset bộ nhớ
+        });
+
+        // Xử lý nút Quay lại bảng điều khiển
+        document.getElementById('back').addEventListener('click', function () {
+            window.location.href = 'trangchinh.html'; // Chuyển hướng về file trangchinh.html
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Environment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- Thư viện CodeMirror để làm nổi bật cú pháp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+</head>
+
+<body>
+    <div class="coding-container">
+        <h1 class="coding-title" id="exerciseTitle">Exercise Title: Implement Fibonacci</h1>
+        <p class="coding-subtitle" id="exerciseDescription">Description: Write a program to find the n-th Fibonacci
+            number.</p>
+
+        <!-- Language switcher -->
+        <div class="coding-language-switcher">
+            <label for="language">Chọn ngôn ngữ:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="cpp">C++</option>
+            </select>
+        </div>
+
+        <!-- Editor -->
+        <textarea id="codeEditor" class="coding-editor"></textarea>
+
+        <!-- Instructions -->
+        <div class="coding-instructions">
+            <h3>Instructions:</h3>
+            <p>Write the function to calculate the Fibonacci number for a given integer n.</p>
+        </div>
+
+        <!-- Test cases -->
+        <div class="coding-test-cases">
+            <h3>Test Cases:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input</th>
+                        <th>Expected Output</th>
+                        <th>Actual Output</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="testResults">
+                    <tr>
+                        <td>n = 5</td>
+                        <td>5</td>
+                        <td><span id="output1">Pending</span></td>
+                        <td><span id="status1">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>n = 10</td>
+                        <td>55</td>
+                        <td><span id="output2">Pending</span></td>
+                        <td><span id="status2">Pending</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Buttons -->
+        <div class="coding-buttons">
+            <button onclick="runCode()">Run Code</button>
+            <button onclick="clearCode()">Clear Code</button>
+            <button onclick="submitCode()">Submit Code</button>
+        </div>
+
+        <!-- Output -->
+        <div id="output" class="coding-output">
+            <h3>Execution Output:</h3>
+            <pre id="executionResult"></pre>
+        </div>
+    </div>
+
+</body>
+
+</html>

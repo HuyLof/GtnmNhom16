@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management</title>
+    <link rel="stylesheet" href="lab1.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quản lý khóa học</h1>
+
+        <!-- View Course Details Modal -->
+        <div id="view-course-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>View Course</h2>
+                <p><strong>Mã môn học:</strong> <span id="view-course-id"></span></p>
+                <p><strong>Tên môn học:</strong> <span id="view-course-name"></span></p>
+                <p><strong>Mô tả:</strong> <span id="view-course-description"></span></p>
+                <p><strong>Đuọc tạo bởi:</strong> <span id="view-course-instructor"></span></p>
+                <p><strong>Tạo vào lúc:</strong> <span id="view-course-created-at"></span></p>
+                <p><strong>Cập nhật vào lúc:</strong> <span id="view-course-updated-at"></span></p>
+                <button id="edit-course-btn">Chỉnh sửa</button>
+                <button id="delete-course-btn">Xóa</button>
+            </div>
+        </div>
+
+        <!-- Create or Edit Course Form -->
+        <form id="course-form">
+            <h2 id="form-title">Thêm khóa học</h2>
+
+            <label for="course-id">Mã khóa học (Được tạo tự động):</label>
+            <input type="text" id="course-id" name="course-id" readonly>
+
+            <label for="course-name">Tên Khóa Học:</label>
+            <input type="text" id="course-name" name="course-name" maxlength="255" required>
+
+            <label for="course-description">Mô tả:</label>
+            <textarea id="course-description" name="course-description" rows="4"
+                placeholder="Nhập mô tả vào đây..."></textarea>
+
+            <label for="course-instructor">Danh sách giảng viên:</label>
+            <select id="course-instructor" name="course-instructor" required>
+                <option value="">--Chọn giảng viên--</option>
+                <option value="1">Nguyên Tiến Linh</option>
+                <option value="2">Phùng Thanh Độ</option>
+                <option value="3">Phan Lê Vi Thanh</option>
+            </select>
+
+            <label for="created-at">Được tạo vào lúc:</label>
+            <input type="text" id="created-at" name="created-at" readonly>
+
+            <label for="updated-at">Cập nhật vào lúc:</label>
+            <input type="text" id="updated-at" name="updated-at" readonly>
+
+            <button type="submit">Lưu Khóa Học</button>
+        </form>
+    </div>
+
+    <script>
+        // Handle opening and closing the modal for viewing course details
+        const modal = document.getElementById('view-course-modal');
+        const closeModalBtn = document.querySelector('.close-btn');
+
+        // Open the modal (this would typically be triggered by some event)
+        document.getElementById('edit-course-btn').addEventListener('click', function () {
+            modal.style.display = 'block';
+        });
+
+        // Close the modal
+        closeModalBtn.onclick = function () {
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+.container-row {
+    display: flex;
+    justify-content: space-between;
+    /* Khoảng cách đều giữa các phần tử */
+    align-items: flex-start;
+    /* Căn theo đầu */
+    gap: 30px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+.group-page,
+.web-project {
+    flex: 1;
+    /* Mỗi phần tử sẽ chiếm đều 50% */
+    padding: 20px;
+    /* Khoảng cách bên trong */
+    border: 1px solid #ccc;
+    /* Đường viền */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng */
+    background-color: #f9f9f9;
+    /* Màu nền */
+}
+
+div.gallery {
+    margin: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 100%;
+    background-color: #e7e7e7;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    float: right;
+    margin-right: 10px;
+    margin-top: 8px;
+    color: #048021;
+    /* Màu chữ */
+    text-decoration: none;
+    /* Loại bỏ gạch chân */
+    font-size: 20px;
+    /* Cỡ chữ */
+    font-weight: bold;
+    /* Đậm chữ */
+}
+
+/* Thay đổi khi hover */
+.desc:hover {
+    color: #00a008;
+    /* Màu xanh khi di chuột */
+    text-decoration: underline;
+    /* Thêm gạch chân khi di chuột */
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: crimson;
+}

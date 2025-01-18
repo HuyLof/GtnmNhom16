@@ -1,0 +1,344 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Tahoma;
+    background-color: #f4f4f9; /* Nền xám nhạt */
+}
+
+.container {
+    width: 100%;
+    height: 1400px;
+}
+
+.header {
+    height: 60px;
+    background-color: #2b2d42; /* Xám đậm */
+    color: #edf2f4; /* Màu trắng nhạt */
+    font-size: 15px;
+}
+
+.nav_left {
+    float: left;
+    margin-top: 20px;
+}
+
+.arrow {
+    position: relative;
+    left: 12px;
+}
+
+.separator {
+    margin-left: 20px;
+    color: #8d99ae; /* Màu xám xanh */
+}
+
+.nav_left a {
+    text-decoration: none;
+    color: #edf2f4; /* Màu trắng nhạt */
+    margin-left: 20px;
+}
+
+.nav_right {
+    float: right;
+    display: flex;
+    margin-right: 70px;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.star a {
+    text-decoration: none;
+    color: #edf2f4; /* Màu trắng nhạt */
+}
+
+.star i, .cup i {
+    color: #8d99ae; /* Xám xanh */
+}
+
+.cup select {
+    outline: none;
+    background-color: #2b2d42; /* Xám đậm */
+    border: none;
+    color: #edf2f4;
+}
+
+.share select {
+    outline: none;
+    background-color: #2b2d42;
+    border: solid 1px #edf2f4;
+    color: #edf2f4;
+    padding: 5px;
+    position: relative;
+    bottom: 5px;
+}
+
+.exe {
+    color: #edf2f4;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid 1px #edf2f4;
+    position: relative;
+    bottom: 5px;
+}
+
+.section_2 {
+    display: flex;
+}
+
+.section_2 .section_left {
+    flex: 65%;
+}
+
+.video_container {
+    height: 485px;
+    background-color: #2b2d42; /* Xám đậm */
+    border-top: solid 1px #8d99ae;
+}
+
+.menu_bar {
+    background-color: #edf2f4; /* Trắng nhạt */
+    padding: 15px;
+    border-bottom: #8d99ae solid 1px;
+}
+
+.menu_bar a {
+    text-decoration: none;
+    color: #2b2d42; /* Xám đậm */
+    font-size: 15px;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.menu_bar i {
+    color: #2b2d42;
+    margin-left: 30px;
+}
+
+.section_2 .section_right {
+    flex: 35%;
+}
+
+.video {
+    margin-left: 70px;
+}
+
+.content {
+    margin-left: 45px;
+    color: #2b2d42;
+    font-size: 25px;
+}
+
+.star_time_stu {
+    display: flex;
+    gap: 40px; 
+    margin-left: 50px;
+    position: relative;
+    bottom: 20px;
+}
+
+.star_time_stu .star_content, 
+.star_time_stu .stu, 
+.star_time_stu .time {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.stu {
+    margin-left: 20px;
+}
+
+.time {
+    margin-right: 30px;
+}
+
+.star_time_stu .star_content p,
+.star_time_stu .stu p {
+    margin: 0;
+}
+
+.fa-star {
+    color: #ffcb77; /* Vàng nhạt */
+    margin-left: 5px;
+}
+
+.content_bt {
+    display: flex;
+    font-size: 12px;
+    gap: 35px;
+    margin-left: 50px;
+    position: relative;
+    bottom: 45px;
+}
+
+.time_bt {
+    margin-left: 5px;
+}
+
+.time_update {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    margin-left: 50px;
+    position: relative;
+    bottom: 55px;
+    font-size: 15px;
+}
+
+.english_fs, .english_st, .english {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.english {
+    margin-left: 50px;
+    position: relative;
+    bottom: 65px;
+}
+
+.passage {
+    width: 890px;
+    height: 410px;
+    margin-left: 50px;
+    border: #2b2d42 solid 1px;
+    background-color: #edf2f4; /* Nền trắng nhạt */
+}
+
+.passage_content {
+    width: 840px;
+    height: 320px;
+    margin-left: 20px;
+    display: flex;
+    position: relative;
+    right: 10px;
+}
+
+.passage_left {
+    flex: 50%;
+}
+
+.fa-check {
+    margin: 10px;
+}
+
+.passage_right {
+    flex: 50%;
+}
+
+.top {
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.top_1 {
+    display: flex;
+    align-items: center;
+    gap: 340px;
+    width: 550px;
+    height: 50px;
+}
+
+.top_1 p {
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    left: 30px;
+}
+
+.top_2, .top_3, .top_4 {
+    width: 550px;
+    height: 60px;
+}
+
+.top_2:hover, .top_3:hover, .top_4:hover {
+    cursor: pointer;
+    background-color: #8d99ae; /* Màu xám xanh */
+}
+
+.list_nd {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.list_watch {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 5px;
+    margin-left: 65px;
+    position: relative;
+    bottom: 25px;
+}
+
+.source {
+    margin-left: 330px;
+    position: relative;
+    bottom: 30px;
+    border: #2b2d42 solid 1px;
+    width: 120px;
+    padding: 5px 5px;
+}
+
+.select_re {
+    outline: none;
+    border: none;
+}
+
+.cl_1, .cl_2, .cl_3, .cl_4, .cl_5, .cl_6, .cl_7, .cl_8, .cl_9, .cl_10 {
+    display: flex;
+    align-items: center;
+}
+
+.passage_left, .passage_right p {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.passage h2 {
+    margin-left: 40px;
+}
+
+.section_right {
+    border-left: #8d99ae solid 1px;
+}
+
+.sec_1, .sec_2, .sec_3, .sec_4, .sec_5, .sec_6, .sec_7, .sec_8, .sec_9, .sec_10, .sec_11, .sec_12, .sec_13 {
+    display: flex;
+    align-items: center;
+    border-top: #8d99ae solid 1px;
+    height: 60px;
+    padding-top: 10px;
+}
+
+.sec_1:hover, .sec_2:hover, .sec_3:hover, .sec_4:hover, .sec_5:hover, .sec_6:hover, .sec_7:hover, .sec_8:hover, .sec_9:hover, .sec_10:hover, .sec_11:hover, .sec_12:hover, .sec_13:hover {
+    cursor: pointer;
+}
+
+.pass_ {
+    flex: 70%;
+    margin-left: 30px;
+}
+
+.pass_ p {
+    font-weight: bold;
+}
+
+.pass_ h5 {
+    color: #757373;
+    font-size: 10px;
+}
+
+.sec_ {
+    flex: 30%;
+}
+
+.sec_ select {
+    border: none;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}

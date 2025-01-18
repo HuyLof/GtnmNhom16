@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="trangchinh.css">
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Tabs</title>
+</head>
+
+<body class="trangchinh-page">
+
+    <h2>Programming Exercises</h2>
+    <!-- thanh tìm kiếm-->
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="Nhập từ khóa để tìm kiếm...">
+        <button class="search-button" onclick="search()">
+            <i class="fas fa-search">🔍</i>
+        </button>
+    </div>
+    <ul id="resultList" class="search-results"></ul>
+    <!-- Dòng tabs-->
+    <div class="tabs">
+        <div class="tab active" onclick="showExercises('python')">Python</div>
+        <div class="tab" onclick="showExercises('java')">Java</div>
+        <div class="tab" onclick="showExercises('cpp')">C++</div>
+        <div class="tab" onclick="showExercises('csharp')">C#</div>
+        <div class="tab" onclick="showExercises('html')">HTML</div>
+        <div class="tab" onclick="showExercises('css')">CSS</div>
+        <div class="tab" onclick="showExercises('dotnet')">.Net</div>
+        <div class="tab" onclick="showExercises('php')">PHP</div>
+    </div>
+
+    <div id="exercise-list" class="tab-content">
+        <!-- Content will be dynamically loaded here -->
+    </div>
+
+</body>
+
+</html>
